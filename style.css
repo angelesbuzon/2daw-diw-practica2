@@ -1,0 +1,139 @@
+/**********
+ * GENERAL
+ ********** */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+
+}
+
+section + section {
+    margin-top: 3%;
+}
+
+h1, h2 {
+    margin-bottom: 0.5lh;
+}
+
+p {
+    margin-bottom: 1lh;
+}
+
+/* CLASES */
+.button {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgb(151, 121, 81);
+    border-radius: 8px;
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+/********************
+ * HEADER AND FOOTER
+ ******************** */
+
+header, footer {
+    padding: 15px;
+
+    ul {
+        list-style-type: none;
+    }
+}
+
+header {
+    background-color: rgb(151, 121, 81);
+    
+    & > nav {
+        background-color: red;
+
+        display: flex;
+        justify-content: space-between;
+
+        & > div {
+            width: 20%;
+            background-color: green;
+        }
+
+        ul {
+            width: 100%;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+
+            li {
+                padding: 0 5%;
+            }
+
+            a {
+                color: #fff;
+                font-weight: bold;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+footer {
+    color: #fff;
+    background-color: #222222;
+
+    a {
+        color: #fff;
+    }
+
+    & > div {
+        display: flex;
+
+    }
+}
+
+/********
+ * INDEX
+ ******** */
+
+/* INDEX - BANNER */
+section#intro-banner {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/img/banner3.jpg');
+        /* https://pixabay.com/es/photos/panader%c3%ada-panes-clasificado-surtido-1868925/ */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    color: #fff;
+    display: flex;
+    align-items: center;
+
+    & > div  {
+        display: flex;
+        justify-content: center;
+
+        & > div {
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+
+        }
+    }
+}
+
