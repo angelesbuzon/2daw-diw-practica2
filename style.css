@@ -15,6 +15,7 @@ And strawberry jam :) https://www.color-hex.com/color-palette/13436 */
 :root {
     --primary: #eec07b;
     --secondary: #422308;
+    --dark: rgb(24, 14, 5);
     --accent: #680023;
     --light: #d8c4aa;
     --whiteish: #f0ede8;
@@ -60,15 +61,19 @@ p {
     margin-bottom: 1lh;
 }
 
+address {
+    font-style: normal;
+}
+
 /* CLASES */
 .button {
-    color: #fff;
+    color: var(--whiteish);
     font-weight: bold;
     text-decoration: none;
     background-color: var(--secondary);
-    border-radius: 8px;
+    border-radius: 12px;
     display: inline-block;
-    padding: 10px 15px;
+    padding: 15px 20px;
 
     &:hover {
         background-color: var(--accent);
@@ -87,40 +92,45 @@ p {
  ******************** */
 
 header, footer {
-    padding: 15px;
+    background-color: var(--dark);
 
     ul {
         list-style-type: none;
-    }
 
+        a:hover {
+            color: var(--primary);
+        }
+    }
 }
 
 header {
-    background-color: var(--secondary);
+    padding: 15px 0;
+    background-color: var(--dark);
     
     & > nav {
         /* background-color: red; */
 
         display: flex;
         justify-content: space-between;
+        align-items: center;
+
 
         & > div {
             max-width: 80px;
         }
 
         ul {
-            width: 100%;
+            width: 80%;
             /* background-color: aqua; */
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: space-between;
 
             li {
                 padding: 0 5%;
             }
 
             a {
-                color: #fff;
+                color: var(--whiteish);
                 font-weight: bold;
                 text-decoration: none;
             }
@@ -129,17 +139,35 @@ header {
 }
 
 footer {
-    color: #fff;
-    background-color: #111;
+    padding: 40px 0;
+    color: var(--whiteish);
 
     a {
-        color: #fff;
+        color: var(--whiteish);
     }
 
     & > div {
         display: flex;
-
+        justify-content: space-between;
     }
+
+    #footer-contacto {
+        ul {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           border: 1px solid red;
+           
+           li {
+            padding: 0 2%;
+           }
+
+           a {
+            text-decoration: none;
+           }
+        }
+    }
+
 }
 
 /********
@@ -149,13 +177,13 @@ footer {
 /* INDEX - BANNER */
 section#intro-banner {
     height: 90vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/img/banner3.jpg');
+    background: linear-gradient(rgba(24, 14, 5, 0.7), rgba(24, 14, 5, 0.7)), url('./assets/img/banner3.jpg');
         /* https://pixabay.com/es/photos/panader%c3%ada-panes-clasificado-surtido-1868925/ */
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 
-    color: #fff;
+    color: var(--whiteish);
     display: flex;
     align-items: center;
 
@@ -174,8 +202,6 @@ section#intro-banner {
 
         }
     }
-
-
 }
 
 section#intro-promo {
