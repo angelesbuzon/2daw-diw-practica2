@@ -37,7 +37,7 @@ img {
 body {
     font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
     font-size: 18px;
-    background-color: var(--whiteish);
+    background-color: var(--light);
 }
 
 section + section {
@@ -65,7 +65,7 @@ address {
     font-style: normal;
 }
 
-/* CLASES */
+/* CLASSES */
 .button {
     color: var(--whiteish);
     font-weight: bold;
@@ -83,8 +83,19 @@ address {
 .container {
     width: 90%;
     margin: 0 auto;
+
+    @media screen and (max-width: 768px) {
+        width: 90%;
+    }
+
+    @media screen and (max-width: 425px) {
+        width: 95%;
+    }
 }
 
+.logo {
+    max-width: 100px;
+}
 
 
 /********************
@@ -108,20 +119,12 @@ header {
     background-color: var(--dark);
     
     & > nav {
-        /* background-color: red; */
-
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-
-        & > div {
-            max-width: 80px;
-        }
-
         ul {
-            width: 80%;
-            /* background-color: aqua; */
+            width: 100%;
             display: flex;
             justify-content: space-between;
 
@@ -136,38 +139,116 @@ header {
             }
         }
     }
-}
 
-footer {
-    padding: 40px 0;
-    color: var(--whiteish);
+    #menus {
+        width: 80%;
+    }
 
-    a {
+    #short-menu {
         color: var(--whiteish);
-    }
+        display: none;
 
-    & > div {
-        display: flex;
-        justify-content: space-between;
-    }
+        & summary {
+            list-style-type: none;
+            cursor: pointer;
+            transition-duration: 0.2s;
+        }
 
-    #footer-contacto {
-        ul {
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           border: 1px solid red;
-           
-           li {
-            padding: 0 2%;
-           }
-
-           a {
-            text-decoration: none;
-           }
+        &[open] summary {
+            padding-bottom: 10px;
         }
     }
 
+    #long-menu, #short-menu {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    header {
+        text-align: center;
+
+        .logo {
+            align-self: center;
+        }
+
+        #long-menu {
+            display: none;
+        }
+
+        #short-menu {
+            display: block;
+
+            ul {
+                display: block;
+        
+                li:not(:last-of-type) {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    color: var(--whiteish);
+
+    .container {
+        & > div {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        & > div+div {
+            border-top: 1px solid var(--whiteish);
+        }
+    }
+
+    #social {
+        text-align: right;
+
+        a+a {
+            padding-left: 10px;
+        }
+    }
+
+    #location p {
+        margin-bottom: 0;
+    }
+
+    a {
+        color: inherit;
+
+        &:hover {
+            color: var(--primary);
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    footer > .container > div:nth-of-type(2) {
+        width: 100%;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    footer {
+        text-align: center;
+        
+        & > .container > div:nth-of-type(1) {
+            width: 100%;
+            display: block;
+        }
+
+        #social {
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
 }
 
 /********
