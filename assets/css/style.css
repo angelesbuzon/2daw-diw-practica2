@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 10rem;
+    font-size: 10vw; /* vw = responsive */
 }
 
 h2 {
@@ -203,7 +203,7 @@ footer {
         }
 
         & > div+div {
-            border-top: 1px solid var(--whiteish);
+            border-top: 1px solid var(--light);
         }
     }
 
@@ -220,7 +220,7 @@ footer {
     }
 
     a {
-        color: inherit;
+        color: var(--light);
 
         &:hover {
             color: var(--primary);
@@ -258,7 +258,7 @@ footer {
 /* INDEX - BANNER */
 section#intro-banner {
     height: 90vh;
-    background: linear-gradient(rgba(24, 14, 5, 0.7), rgba(24, 14, 5, 0.7)), url('./assets/img/banner3.jpg');
+    background: linear-gradient(rgba(24, 14, 5, 0.7), rgba(24, 14, 5, 0.7)), url('./../img/banner3.jpg');
         /* https://pixabay.com/es/photos/panader%c3%ada-panes-clasificado-surtido-1868925/ */
     background-position: center;
     background-size: cover;
@@ -280,7 +280,7 @@ section#intro-banner {
             padding: 50px;
             background-color: rgba(0, 0, 0, 0.5);
             text-align: center;
-
+            box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.5);
         }
     }
 }
