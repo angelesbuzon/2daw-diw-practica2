@@ -15,8 +15,8 @@ And strawberry jam :) https://www.color-hex.com/color-palette/13436 */
 :root {
     --primary: #eec07b;
     --secondary: #422308;
-    --dark: rgb(24, 14, 5);
-    --accent: #680023;
+    --dark: #180e05; /* rgb(24, 14, 5); */
+    --accent: #680023; /* rgb(104, 0, 35)  */
     --light: #d8c4aa;
     --whiteish: #f0ede8;
 }
@@ -35,13 +35,14 @@ img {
 }
 
 body {
+    color: var(--dark);
     font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
     font-size: 18px;
     background-color: var(--light);
 }
 
 section + section {
-    margin-top: 3%;
+    margin: 5% 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -50,11 +51,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 10vw; /* vw = responsive */
+    font-size: 12vw; /* vw = responsive */
 }
 
 h2 {
     font-size: 5rem;
+}
+
+h3 {
+    font-size: 3rem;
 }
 
 p {
@@ -95,6 +100,11 @@ address {
 
 .logo {
     max-width: 100px;
+}
+
+.accented-title {
+    color: var(--whiteish);
+    text-shadow: 2px 2px var(--accent);
 }
 
 
@@ -192,6 +202,7 @@ header {
 
 footer {
     color: var(--whiteish);
+    padding-top: 25px;
 
     .container {
         & > div {
@@ -251,13 +262,19 @@ footer {
     }
 }
 
+main {
+    summary {
+        font-weight: bold;
+    }
+}
+
 /********
  * INDEX
  ******** */
 
 /* INDEX - BANNER */
 section#intro-banner {
-    height: 90vh;
+    min-height: 90vh;
     background: linear-gradient(rgba(24, 14, 5, 0.7), rgba(24, 14, 5, 0.7)), url('./../img/banner3.jpg');
         /* https://pixabay.com/es/photos/panader%c3%ada-panes-clasificado-surtido-1868925/ */
     background-position: center;
@@ -278,9 +295,8 @@ section#intro-banner {
 
         & > div {
             padding: 50px;
-            background-color: rgba(0, 0, 0, 0.5);
+            /* background-color: rgba(0, 0, 0, 0.5); */
             text-align: center;
-            box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.5);
         }
     }
 }
@@ -295,57 +311,37 @@ section#intro-promo {
 }
 
 section#intro-products {
-    display: grid;
-    /* grid-template-areas:
-        "bread-text" "bread-img"
-        "pastries-img" "pastries-text"
-    ; */
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-
-    & > div > div {
-        
-    }
+    color: var(--whiteish);
+    display: flex;
+    align-items: center;
+    gap: 0;
 
     #intro-products-bread, #intro-products-pastries {
+        min-height: 500px;
+        display: flex;
+        align-items: center;
 
         & > div {
             width: 100%;
-            background-color: #ddd;
+            padding: 5%;
+            text-align: center;
         }
         
     }
 
     #intro-products-bread {
-        background-color: aqua;
-        grid-row: 1 / 2;
-
-        .grid-text {
-            grid-column: 1 / 2;
-        }
-
-        .grid-img {
-            background-image: url('./assets/img/panes.jpg');
-            background-position: center;
-            background-size: cover;
-            border: 1px solid blue;
-            grid-area: 2 / 3;
-        }
+        background: linear-gradient(rgba(24, 14, 5, 0.7), rgba(24, 14, 5, 0.7)), url("./../img/productos/panes.jpg");
+        background-position: center;
+        background-size: cover;
     }
 
     #intro-products-pastries {
-        background-color:brown;
+        background: linear-gradient(rgba(24, 14, 5, 0.7), rgba(24, 14, 5, 0.7)), url("./../img/productos/bolleria.jpg");
+        background-position: center;
+        background-size: cover;
+    }
 
-        .grid-text {
-            grid-area: 2 / 3;
-        }
-
-        .grid-img {
-            background-image: url('./assets/img/bolleria.jpg');
-            background-position: center;
-            background-size: cover;
-            border: 1px solid red;
-            grid-area: 1 / 2;
-        }
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
     }
 }
