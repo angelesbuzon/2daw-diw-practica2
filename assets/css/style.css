@@ -78,7 +78,7 @@ body {
 
 .accented-title {
     color: var(--whiteish);
-    text-shadow: 2px 2px var(--accent);
+    text-shadow: 3px 3px 0px var(--accent);
 }
 
 
@@ -186,14 +186,24 @@ footer {
             align-items: center;
             padding: 20px 0;
         }
+    }
 
-        & > div+div {
-            border-top: 1px solid var(--light);
-        }
+    #footer-top > div:first-of-type {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+    }
+
+    #footer-bottom {
+        border-top: 1px solid var(--light);
+        column-gap: 15px;
     }
 
     #social {
         text-align: right;
+        width: 100%;
 
         a+a {
             padding-left: 10px;
@@ -222,6 +232,10 @@ footer {
             display: block;
         }
 
+        #footer-top > div:first-of-type {
+            display: block;
+        }
+
         #social {
             margin-top: 20px;
             text-align: center;
@@ -237,19 +251,22 @@ main {
 
     h1, h2, h3, h4, h5, h6 {
         font-family: "Ms Madi";
-        font-weight: bold;
     }
 
     h1 {
-        font-size: 12vw; /* vw = responsive */
+        font-size: clamp(6rem, 12vw, 12rem);
+        text-align: center;
     }
 
     h2 {
-        font-size: 5rem;
+        color: var(--accent);
+        font-size: clamp(4rem, 12vw, 5rem);
     }
 
     h3 {
-        font-size: 3rem;
+        color: var(--secondary);
+        font-size: clamp(2rem, 12vw, 3rem);
+
     }
 
     p, ul, ol, address {
@@ -314,10 +331,14 @@ section#intro-banner {
 
 section#intro-promo {
     text-align: center;
-
+    
     div:has(> img) {
         max-width: 250px;
         margin: 0 auto;
+    }
+
+    h2 {
+        color: var(--secondary);
     }
 }
 
