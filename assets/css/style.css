@@ -17,6 +17,7 @@ And strawberry jam :) https://www.color-hex.com/color-palette/13436 */
     --secondary: #422308;
     --dark: #180e05; /* rgb(24, 14, 5); */
     --accent: #680023; /* rgb(104, 0, 35)  */
+    --accent-light: #a82953;
     --light: #d8c4aa;
     --whiteish: #f0ede8;
 }
@@ -41,34 +42,7 @@ body {
     background-color: var(--light);
 }
 
-section + section {
-    margin: 5% 0;
-}
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Ms Madi";
-    font-weight: bold;
-}
-
-h1 {
-    font-size: 12vw; /* vw = responsive */
-}
-
-h2 {
-    font-size: 5rem;
-}
-
-h3 {
-    font-size: 3rem;
-}
-
-p {
-    margin-bottom: 1lh;
-}
-
-address {
-    font-style: normal;
-}
 
 /* CLASSES */
 .button {
@@ -240,17 +214,10 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
-    footer > .container > div:nth-of-type(2) {
-        width: 100%;
-        display: block;
-    }
-}
-
-@media screen and (max-width: 700px) {
     footer {
         text-align: center;
-        
-        & > .container > div:nth-of-type(1) {
+    
+        & > .container > div {
             width: 100%;
             display: block;
         }
@@ -262,7 +229,41 @@ footer {
     }
 }
 
+
 main {
+    section + section {
+        margin: 5% 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Ms Madi";
+        font-weight: bold;
+    }
+
+    h1 {
+        font-size: 12vw; /* vw = responsive */
+    }
+
+    h2 {
+        font-size: 5rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    p, ul, ol, address {
+        margin-bottom: 1lh;
+    }
+
+    ul {
+        list-style: inside;
+    }
+
+    address {
+        font-style: normal;
+    }
+
     details:has(+h3) {
         margin-bottom: 1lh;
     }
@@ -283,8 +284,6 @@ main {
 /********
  * INDEX
  ******** */
-
-/* INDEX - BANNER */
 section#intro-banner {
     min-height: 90vh;
     background: linear-gradient(rgba(24, 14, 5, 0.7), rgba(24, 14, 5, 0.7)), url('./../img/banner3.jpg');
@@ -340,7 +339,6 @@ section#intro-products {
             width: 100%;
             padding: 10%;
         }
-        
     }
 
     #intro-products-bread {
@@ -355,13 +353,8 @@ section#intro-products {
         background-size: cover;
     }
 
-    
-}
-
-@media screen and (max-width: 1100px) {
-    section#intro-products {
+    @media screen and (max-width: 1100px) {
         flex-direction: column;
-        
     }
 }
 
@@ -370,5 +363,146 @@ section#intro-faq {
         display: flex;
         justify-content: center;
         margin-top: 1lh;
+    }
+}
+
+/**********
+ * CONTACT
+ ********** */
+#contacto-redes #redes {
+    max-width: 600px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+    a {
+        border-bottom: 0;
+    }
+
+    img {
+        width: auto;
+        padding: 20px;
+    }
+}
+
+#contacto-formulario form {
+    display: grid;
+    grid-template-columns: repeat (2 auto);
+    grid-template-rows: repeat (3 auto);
+    gap: 25px;
+
+    & > fieldset {
+        padding: 15px;
+        border: none;
+        border-radius: 10px;
+        display: grid;
+        padding-left: 0;
+        padding-right: 0;
+
+        &:nth-of-type(1) { /* Datos personales */
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 20px;
+
+            & > div { /* Ej: Nombre+Apellidos */
+                display: grid;
+
+                & label, input {
+                    display: block;
+                }
+
+                & input, select, option {
+                    width: 100%;
+                }
+            }
+
+            @media screen and (max-width: 575px) {
+                grid-template-columns: auto;
+            }
+        }
+
+        &:nth-of-type(2) { /* Motivo */
+            align-items: center;
+        }
+
+        &:nth-of-type(3) { /* Comentarios */
+            grid-column: span 2;
+        }
+
+        @media screen and (max-width: 375px) {
+            border: 0;
+            padding: 0;
+        }
+    }
+
+    & > div {
+        text-align: center;
+        grid-column: span 2;
+
+        input[type="submit"] {
+            border: 0;
+            color: var(--whiteish);
+            margin-bottom: 1lh;
+        }
+    }
+
+    legend {
+        color:var(--dark);;
+        font-weight: bold;
+        padding: 0;
+
+        @media screen and (max-width: 375px) {
+            padding: 0;
+        }
+    }
+
+    input, textarea, select, option {
+        color: var(--dark);
+        font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+        font-size: 1rem;
+        border: 1px solid var(--dark);;
+        border-radius: 5px;
+        padding: 10px;
+        outline: none; /* Desaparece borde negro feo al hacer focus */
+    }
+
+    input[type="submit"] {
+        font-size: 1.5rem;
+    }
+
+    select, option {
+        color: var(--dark);
+        background-color: #fff;
+    }
+
+    option:first-of-type {
+        display: none; /* Así la opción --- no se puede seleccionar */
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    ::placeholder {
+        color: var(--accent-light);
+    }
+
+    :focus {
+        border: 0;
+        outline: 2px solid var(--dark);
+    }
+
+    :focus::placeholder {
+        color: transparent; /* Placeholder disappears when clicking to type message */
+    }
+
+    @media screen and (max-width: 900px) {
+        display: block;
+
+        > fieldset + fieldset, input[type="submit"] {
+            margin-top: 25px; /* Como el gap del grid */
+        }
     }
 }
