@@ -1,69 +1,272 @@
-<h2>Panes</h2>
-Hogaza clásica
-- 
-Descripción del Producto
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Horno San Miguel">
+    <meta name="description" content="Pan de verdad cada mañana en tu tahona tradicional de barrio de toda la vida. Pan de masa madre y productos de bollería y salados.">
+    <meta name="keywords" content="pan, bollería, baguette, hogaza, masa madre">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Horno San Miguel - Pan de verdad, cada mañana</title>
+</head>
+<body>
+    <header>
+        <nav class="container" aria-label="Menú principal">
+            <div class="logo">
+                <a href="./index.html" aria-current="page"><img src="./assets/img/logos/logo.png" alt="Horno San Miguel" title="Inicio"></a>
+            </div>
+            <div id="menus">
+                <details id="short-menu">
+                    <summary title="Menú">☰</summary>
+                    <ul>
+                        <li><a href="./sobre-nosotros.html">Sobre nosotros</a></li>
+                        <li><a href="./productos.html">Productos</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </details>
+                <ul id="long-menu">
+                    <li><a href="./sobre-nosotros.html">Sobre nosotros</a></li>
+                        <li><a href="./productos.html">Productos</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="products-intro" class="container">
+            <h1>Productos</h1>
+            <p>
+                Descubre la diferencia que hace el tiempo, el amor y la dedicación.
+                En Horno San Miguel, nuestra promesa es simple: <strong>el mejor pan de masa madre y la mejor bollería</strong> hechos con ingredientes naturales y horneados al punto justo.
+                Hemos preparado un catálogo de productos frescos, variados y llenos de sabor para acompañarte en cada momento del día.
+            </p>
+            <p>
+                ¡Explora nuestros productos y encuentra tu favorito! Y luego pásate por nuestra panadería para un bocado, o <a href="./contacto.html">haznos un encargo</a> previamente.
+                Recuerda consultar nuestras <a href="./index.html#intro-faq">preguntas frecuentes</a> si tienes dudas sobre nuestros productos o las reservas y encargos. 
+            </p>
+        </section>
+        <section id="products-bread" class="container">
+            <h2>Panes</h2>
+            <div class="product-grid">
+                <article>
+                    <div>
+                        <img src="./assets/img/productos/hogazaclasica.png" alt="Hogaza clásica">
+                    </div>
+                    <div>
+                        <h3><a href="./producto-hogaza-clasica.html">Hogaza clásica</a></h3>
+                        <div class="allergens">
+                            <img src="./assets/img/alergenos/gluten.png" alt="Gluten" title="Gluten">
+                        </div>
+                        <p>1,20 €</p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <img src="./assets/img/productos/panintegral.jpg" alt="Pan integral">
+                    </div>
+                    <div>
+                        <h3><a href="./producto-pan-integral.html">Pan integral</a></h3>
+                        <div class="allergens">
+                            <img src="./assets/img/alergenos/gluten.png" alt="Gluten" title="Gluten">
+                        </div>
+                        <p>1,50 €</p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <img src="./assets/img/productos/panmontanes.jpg" alt="Pan montañés">
+                    </div>
+                    <div>
+                        <h3><a href="./producto-pan-montanes.html">Pan montañés</a></h3>
+                        <div class="allergens">
+                            <img src="./assets/img/alergenos/gluten.png" alt="Gluten" title="Gluten">
+                        </div>
+                        <p>1,80 €</p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <img src="./assets/img/productos/pannueces.jpg" alt="Pan de nueces">
+                    </div>
+                    <div>
+                        <h3><a href="./producto-pan-nueces.html">Pan de nueces</a></h3>
+                        <div class="allergens">
+                            <img src="./assets/img/alergenos/gluten.png" alt="Gluten" title="Gluten">
+                            <img src="./assets/img/alergenos/azufresulfitos.png" alt="Sulfitos" title="Sulfitos">
+                            <img src="./assets/img/alergenos/frutoscascara.png" alt="Frutos de cáscara" title="Frutos de cáscara">
+                        </div>
+                        <p>5,90 €</p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <img src="./assets/img/productos/mollete.png" alt="Mollete">
+                    </div>
+                    <div>
+                        <h3><a href="./producto-mollete.html">Mollete</a></h3>
+                        <div class="allergens">
+                            <img src="./assets/img/alergenos/gluten.png" alt="Gluten" title="Gluten">
+                        </div>
+                        <p>0,90 €</p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <img src="./assets/img/productos/chapatamultisemilla.png" alt="Chapata multisemilla">
+                    </div>
+                    <div>
+                         <h3><a href="./producto-chapata-multisemilla.html">Chapata multisemilla</a></h3>
+                        <div class="allergens">
+                            <img src="./assets/img/alergenos/gluten.png" alt="Gluten" title="Gluten">
+                            <img src="./assets/img/alergenos/sesamo.png" alt="Sésamo" title="Sésamo">
+                        </div>
+                        <p>1,30 €</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="products-pastries" class="container">
+            <h2>Bollería y salados</h2>
 
-<hx>Características y Cualidades</hx>
-<p>
-La Hogaza Clásica es el corazón de Horno San Miguel. Es un pan robusto, de corteza gruesa y crujiente, que envuelve una miga de alveolado irregular, jugosa y con un sutil sabor ácido característico de la verdadera masa madre.
-</p>
-<p>
-Elaborada diariamente con solo cuatro ingredientes—harina de trigo de fuerza, agua, sal marina y nuestra masa madre cultivada desde la fundación—esta hogaza es la prueba viva de que los métodos lentos y artesanales dan como resultado un pan excepcional, que no solo es delicioso, sino que se conserva fresco durante días.
-</p>
-Características y Cualidades
-<ul>
-    <li><strong>Método</strong>: 100% Artesanal. Larga fermentación (mínimo 18 horas).</li>
-    <li><strong>Ingrediente clave</strong>: Masa Madre centenaria.</li>
-    <li><strong>Corteza</strong>: Gruesa, dorada y excepcionalmente crujiente.</li>
-    <li><strong>Miga</strong>: Tierna, ligeramente húmeda y con un alveolado abierto e irregular.</li>
-    <li><strong>Sabor</strong>: Notas complejas a cereal, con un toque ácido muy agradable.</li>
-    <li><strong>Conservación</strong>: Óptima. Mantiene sus propiedades de sabor y frescura por más tiempo que un pan común.</li>
-</ul>
+            <div class="product-grid">
+                <article>
+                    <div>
+                        <img src="./assets/img/productos/cookiesvainillachoco.jpg" alt="Cookies de vainilla y chocolate">
+                    </div>
+                    <div>
+                        <h3><a href="./producto-cookies-vainilla-chocolate.html">Cookies de vainilla y chocolate</a></h3>
+                        <div class="allergens">
+                            <img src="./assets/img/alergenos/gluten.png" alt="Gluten" title="Gluten">
+                            <img src="./assets/img/alergenos/soja.png" alt="Soja" title="Soja">
+                            <img src="./assets/img/alergenos/lacteos.png" alt="Leche" title="Leche">
+                            <img src="./assets/img/alergenos/huevos.png" alt="Huevo" title="Huevo">
+                        </div>
+                        <p>5,50 €</p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <img src="./assets/img/productos/magdalenachoconaranja.jpg" alt="Magdalenas de chocolate y naranja">
+                    </div>
+                    <div>
+                        <h3><a href="./producto-magdalenas-chocolate-naranja.html">Magdalenas de chocolate y naranja</a></h3>
+                        <div class="allergens">
+                            <img src="./assets/img/alergenos/gluten.png" alt="Gluten" title="Gluten">
+                            <img src="./assets/img/alergenos/soja.png" alt="Soja" title="Soja">
+                            <img src="./assets/img/alergenos/lacteos.png" alt="Leche" title="Leche">
+                            <img src="./assets/img/alergenos/huevos.png" alt="Huevo" title="Huevo">
+                            <img src="./assets/img/alergenos/azufresulfitos.png" alt="Sulfitos" title="Sulfitos">
+                        </div>
+                        <p>5,30 €</p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <img src="./assets/img/productos/empanadaatun.jpg" alt="Empanada de atún">
+                    </div>
+                    <div>
+                        <h3><a href="./producto-empanada-atun.html">Empanada de atún</a></h3>
+                        <div class="allergens">
+                            <img src="./assets/img/alergenos/gluten.png" alt="Gluten" title="Gluten">
+                            <img src="./assets/img/alergenos/lacteos.png" alt="Leche" title="Leche">
+                            <img src="./assets/img/alergenos/huevos.png" alt="Huevo" title="Huevo">
+                            <img src="./assets/img/alergenos/pescado.png" alt="Pescado" title="Pescado">
+                        </div>
+                        <p>2,60 €</p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <img src="./assets/img/productos/empanadaberenjena.jpg" alt="Empanada de atún">
+                    </div>
+                    <div>
+                        <h3><a href="./producto-empanada-berenjena.html">Empanada de berenjena</a></h3>
+                        <div class="allergens">
+                            <img src="./assets/img/alergenos/gluten.png" alt="Gluten" title="Gluten">
+                            <img src="./assets/img/alergenos/lacteos.png" alt="Leche" title="Leche">
+                            <img src="./assets/img/alergenos/huevos.png" alt="Huevo" title="Huevo">
+                        </div>
+                        <p>2,30 €</p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <img src="./assets/img/productos/quicheespinacas.webp" alt="Quiche de espinacas">
+                    </div>
+                    <div>
+                        <h3><a href="./producto-quiche-espinacas.html">Quiche de espinacas</a></h3>
+                        <div class="allergens">
+                            <img src="./assets/img/alergenos/gluten.png" alt="Gluten" title="Gluten">
+                            <img src="./assets/img/alergenos/lacteos.png" alt="Leche" title="Leche">
+                            <img src="./assets/img/alergenos/huevos.png" alt="Huevo" title="Huevo">
+                            <img src="./assets/img/alergenos/frutoscascara.png" alt="Frutos de cáscara" title="Frutos de cáscara">
+                        </div>
+                        <p>2,60 €</p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <img src="./assets/img/productos/bolasqueso.webp" alt="Bolas de queso">
+                    </div>
+                    <div>
+                        <h3><a href="./producto-bolas-queso.html">Bolas de queso</a></h3>
+                        <div class="allergens">
+                            <img src="./assets/img/alergenos/gluten.png" alt="Gluten" title="Gluten">
+                            <img src="./assets/img/alergenos/lacteos.png" alt="Leche" title="Leche">
+                            <img src="./assets/img/alergenos/huevos.png" alt="Huevo" title="Huevo">
+                        </div>
+                        <p>4,10 €</p>
+                    </div>
+                </article>
+            </div>
 
-Información técnica
-<ul>
-    <li><strong>Ingredientes:</strong> Harina de trigo de fuerza, agua, sal marina, masa madre (harina de trigo, agua).</li>
-    <li><strong>Peso aproximado:</strong> 500g.</li>
-    <li><strong>Alérgenos:</strong> Contiene gluten. Puede contener trazas de frutos secos.</li>
-</ul>
-
-----
-
-Pan integral
-Pan integral elaborado con harina de origen local y molida en piedra. Su masa madre y fermentación prolongada le otorgan una textura esponjosa y un sabor excepcional.
-
-Información técnica
-<ul>
-    <li><strong>Ingredientes:</strong> Harina integral de TRIGO, agua, GLUTEN de TRIGO, harina de TRIGO, fibras vegetales (TRIGO y AVENA), masa madre (harina de TRIGO y agua), sal, levadura y agente de tratamiento de la harina (ácido ascórbico).</li>
-    <li><strong>Peso aproximado:</strong> 500g.</li>
-    <li><strong>Alérgenos:</strong> Contiene gluten. Puede contener trazas de frutos secos.</li>
-</ul>
-
-----
-Pan montañés
-¡Una joya artesanal para los amantes del buen comer! Nuestro pan de tritordeum con maíz y avena ofrece una experiencia culinaria única en cada bocado. Gracias a la cuidadosa selección de cereales de calidad, como el tritordeum y el maíz. Además, la incorporación de la avena potencia su valor nutricional, convirtiéndolo en una opción equilibrada. Experimenta la combinación perfecta de sabor y tradición en cada rebanada. 
-
-Información técnica
-<ul>
-    <li><strong>Ingredientes:</strong> Ingredientes: harina de TRITORDEUM (34,2%), agua, harina de TRIGO (17,6%), masa madre (harina de TRIGO y agua), harina de maíz (5,1%), sal, copos de AVENA (1,1%), GLUTEN de TRIGO, fibra de TRIGO, levadura y agente de tratamiento de la harina (ácido ascórbico).</li>
-    <li><strong>Peso aproximado:</strong> 500g.</li>
-    <li><strong>Alérgenos:</strong> Contiene gluten. Puede contener trazas de frutos secos.</li>
-</ul>
-
------
-
-Batard de chía
-Un pan que te invita a descubrir la fusión equilibrada entre las texturas de las semillas de chía. Cuenta con una fermentación cuidadosa utilizando la masa madre de cultivo de Domi Vélez y una elaboración exclusiva. Cada bocado es una invitación a descubrir el placer de cuidar de ti mismo mientras disfrutas de un pan único que va más allá de lo convencional. 
-
-Información técnica
-<ul>
-    <li><strong>Ingredientes:</strong>
-        Harina de TRIGO (53,5%), agua, masa madre (harina de TRIGO y agua), semillas de chía (3,2%), sal, GLUTEN de TRIGO, fibra de TRIGO y levadura.
-    <li><strong>Peso aproximado:</strong> 500g.</li>
-    <li><strong>Alérgenos:</strong> Contiene gluten. Puede contener trazas de frutos secos.</li>
-</ul>
-
-<h2>Bollería</h2>
-
-
-<h2>Salados</h2>
+            <div class="cta">
+                <a href="./contacto.html" class="button">Hacer un encargo</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div id="footer-top">
+                <div>
+                    <div id="logo">
+                        <img src="./assets/img/logos/logo.png" alt="Logo de Horno San Miguel" class="logo">
+                    </div>
+                    <div id="location">
+                        <adress>
+                            <b>Horno San Miguel</b>
+                            <br>
+                            Pl. Mayor 8
+                            <br>
+                            28000 Madrid
+                        </address>
+                        <p>
+                            Lunes-viernes: <time>7:00</time>-<time>14:00</time> / <time>17:30</time>-<time>20:00</time>
+                            <br>
+                            Sábados y domingos: <time>7:30</time>-<time>14:30</time>
+                        </p>
+                    </div>
+                </div>
+                <div id="social">
+                    <a href="mailto:info@hornosanmiguel.es"><img src="./assets/img/logos/logo_email.png" alt="Correo electrónico" title="Correo electrónico"></a> 
+                    <a href="tel:+555112233"><img src="./assets/img/logos/logo_tel.png" alt="Teléfono" title="Teléfono"></a> 
+                    <a href="" target="_blank"><img src="./assets/img/logos/logo_facebook.png" alt="Facebook" title="Facebook"></a>
+                    <a href="" target="_blank"><img src="./assets/img/logos/logo_instagram.png" alt="Instagram" title="Instagram"></a>
+                    <a href="" target="_blank"><img src="./assets/img/logos/logo_twitter.png" alt="Twitter" title="Twitter"></a>
+                </div>
+            </div>
+            <div id="footer-bottom">
+                <div id="copy">
+                    <p>&copy; 2025. Todos los derechos reservados.</p>
+                </div>
+                <div id="legal">
+                    <p><a href="">Aviso legal</a> | <a href="">Política de privacidad</a></p>
+                </div>
+                <div id="webmaster">
+                    <p>Web creada por <a href="https://github.com/angelesbuzon/">Ángeles Buzón</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
