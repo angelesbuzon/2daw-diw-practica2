@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ángeles Buzón">
+    <title>Guía de estilo para Horno San Miguel</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: monospace;
+            background-color: #fff;
+        }
+
+        main {
+            background-color: #fff;
+            min-height: 100vh;
+            padding: 5%;
+        }
+
+        h1 {
+            font-size: 4rem !important;
+        }
+
+        h2 {
+            font-size: 2rem !important;
+        }
+
+        h1, h2 {
+            font-family: monospace !important;
+        }
+
+        .guia-colores {
+            display: flex;
+            justify-content: space-around;
+
+            div {
+                width: 100px;
+                height: 100px;
+                border: 5px solid #fff;
+                outline: 1px solid #333;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+            }
+        }
+        
+        div:has(img) {
+            display: flex;
+            justify-content: center;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h1>Guía de estilo de Horno San Miguel</h1>
+        <h2>Introducción</h2>
+        <p>
+            Panadería madrileña ficticia que promociona la forma de hacer pan tradicional. Enfoque en la calidez y en llamar a la acción de hacer encargos.
+        </p>
+        <h2>Colores</h2>
+        <p>
+            Gama de colores tostados más el granate, parecido a la mermelada. El granate claro es para cuando el granate oscuro normal no ofrezca suficiente contraste. Un blanco impuro como tono neutro.
+        </p>
+        <div class="guia-colores">
+            <div style="background-color: var(--whiteish)">
+                #f0ede8
+            </div>
+            <div style="background-color: var(--light)">
+                #d8c4aa
+            </div>
+            <div style="background-color: var(--primary)">
+                #eec07b
+            </div>
+            <div style="background-color: var(--secondary); color: #fff">
+                #422308
+            </div>
+            <div style="background-color: var(--dark); color: #fff">
+                #180e05
+            </div>
+            <div style="background-color: var(--accent); color: #fff">
+                #680023
+            </div>
+            <div style="background-color: var(--accent-light); color: #fff">
+                #a82953
+            </div>
+        </div>
+        <h2>Tipografía</h2>
+        <ul>
+            <li>
+                <span style="font-family: 'Ms Madi'; font-size: 32px"><strong>Ms Madi</strong></span>: serifa para títulos, estilo tradicional en consonancia con la filosofía de este obrador.
+            </li>
+            <li>
+                <span style="font-family: 'Nunito+Sans'"><strong>Nunito Sans</strong></span>: serifa clara y sencilla pero no demasiado convencional para el cuerpo de texto y los menús.
+            </li>
+        </ul>
+        <h2>Imágenes y botones</h2>
+        <div>
+            <img src="./assets/img/logos/logo.png" alt="" style="margin: 0 auto;">
+        </div>
+        <p>
+            Logo sencillo de un molino, remitiendo al saber tradicional de los propietarios.
+        </p>
+        <div class="cta">
+            <a href="./contacto.html" class="button">Hacer un encargo</a>
+        </div>
+    </main>
+</body>
+</html>

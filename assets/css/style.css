@@ -189,6 +189,37 @@ body {
     }
 }
 
+.warning {
+    width: 80%;
+    margin: auto;
+    border-radius: 15px;
+    background-color: var(--accent);
+    color: var(--whiteish);
+    padding: 5%;
+
+    p {
+        font-weight: bold;
+        font-size: larger;
+        margin-bottom: 0.5lh;
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: "🪧";
+        margin-bottom: 0;
+
+        li {
+            padding-inline-start: 1ch;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
 
 /********************
  * HEADER AND FOOTER
@@ -636,6 +667,7 @@ section#contact-form form {
     grid-template-columns: repeat(2 auto);
     grid-template-rows: repeat(3 auto);
     gap: 25px;
+    margin-top: 5%;
 
     & > fieldset {
         padding: 15px;
